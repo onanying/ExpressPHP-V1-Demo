@@ -4,13 +4,13 @@
 return [
 
     // 应用调试模式
-    'app_debug'       => true,
+    'app_debug' => true,
 
     // 自动加载配置文件
     'autoload_config' => ['pdo', 'redis', 'memcache'],
 
     // request配置
-    'request'         => [
+    'request' => [
 
         // 默认过滤方法: htmlspecialchars | strip_tags | 空字符
         'default_filter' => 'htmlspecialchars',
@@ -18,7 +18,7 @@ return [
     ],
 
     // response配置
-    'response'        => [
+    'response' => [
 
         // 数组默认转换类型: json | jsonp | xml
         'array_default_convert' => 'json',
@@ -26,7 +26,7 @@ return [
     ],
 
     // json配置
-    'json'            => [
+    'json' => [
 
         // jsonp 回调函数名
         'jsonp_callback' => 'callback',
@@ -37,36 +37,36 @@ return [
     ],
 
     // session配置
-    'session'         => [
+    'session' => [
 
         // 保存类型: files | redis | memcache
-        'save_handler'    => 'files',
+        'save_handler' => 'files',
 
         // files保存路径: /tmp
         'files_save_path' => 'c:/tmp',
 
         // session有效期
-        'gc_maxlifetime'  => 7200,
+        'gc_maxlifetime' => 7200,
 
     ],
 
     // cookie配置
-    'cookie'          => [
+    'cookie' => [
 
         // 过期时间
-        'expire'        => 0,
+        'expire' => 0,
 
         // 有效的服务器路径
-        'path'          => '/',
+        'path' => '/',
 
         // 有效域名/子域名
-        'domain'        => '',
+        'domain' => '',
 
         // 仅通过安全的 HTTPS 连接传给客户端
-        'secure'        => false,
+        'secure' => false,
 
         // 仅可通过 HTTP 协议访问
-        'httponly'      => false,
+        'httponly' => false,
 
         // 签名密钥
         'signature_key' => '',
@@ -74,7 +74,7 @@ return [
     ],
 
     // http错误
-    'http_exception'  => [
+    'http_exception' => [
 
         // 自定义404错误: 视图地址 | 数组 | 空字符
         // 视图地址: 404 => 'template.404',
