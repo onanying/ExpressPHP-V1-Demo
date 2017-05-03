@@ -5,10 +5,10 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace app\webpage\controller;
+namespace www\controller;
 
-use app\model\Users;
 use sys\response\View;
+use www\model\Users;
 
 class News
 {
@@ -20,12 +20,12 @@ class News
 
     public function index()
     {
-        echo "Route::rule('news/*$', 'webpage/controller/News/index');";
+        echo '\www\controller\News->index';
     }
 
     public function forum()
     {
-        return View::create('webpage.view.news.article', ['name' => 'xiaohua', 'sex' => 'w']);
+        return View::create('view.news.article', ['name' => 'xiaohua', 'sex' => 'w']);
     }
 
     public function article()

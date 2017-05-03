@@ -1,10 +1,13 @@
 {
 
     "autoload": {
+
         "psr-4": {
             "sys\\": "system/library/",
-            "app\\": "application/"
+            "www\\": "app_www/",
+            "api\\": "app_api/"
         }
+        
     }
 
 }

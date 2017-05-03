@@ -5,9 +5,9 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace app\webapi\controller;
+namespace api\controller;
 
-use app\model\Users;
+use api\model\Users;
 use sys\Request;
 
 class News
@@ -21,7 +21,7 @@ class News
     // 减积分
     public function minusCredits()
     {
-        $uid    = Request::get('uid');
+        $uid = Request::get('uid');
         $number = Request::get('number');
         if (!ctype_digit($uid) || !ctype_digit($number)) {
             return ['errCode' => 1, 'errMsg' => '参数错误'];
@@ -34,8 +34,8 @@ class News
     public function add()
     {
         $userName = Request::post('userName');
-        $phone    = Request::post('phone');
-        $credits  = Request::post('credits');
+        $phone = Request::post('phone');
+        $credits = Request::post('credits');
         if (empty($userName) || !ctype_digit($phone) || !ctype_digit($credits)) {
             return ['errCode' => 1, 'errMsg' => '参数错误'];
         }

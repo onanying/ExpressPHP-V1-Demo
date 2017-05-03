@@ -5,7 +5,7 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace app\model;
+namespace api\model;
 
 use sys\Pdo;
 
@@ -20,14 +20,14 @@ class Users
             Pdo::execute(
                 'UPDATE `users` SET credits = credits - :number WHERE uid = :uid',
                 [
-                    'uid'    => $uid,
+                    'uid' => $uid,
                     'number' => $number,
                 ]
             );
             Pdo::execute(
                 'INSERT INTO `credits`(`uid`, `number`) VALUES(:uid, :number)',
                 [
-                    'uid'    => $uid,
+                    'uid' => $uid,
                     'number' => -$number,
                 ]
             );
@@ -50,14 +50,14 @@ class Users
             Pdo::execute(
                 'UPDATE `users` SET credits = credits - :number WHERE uid = :uid',
                 [
-                    'uid'    => $data['uid'],
+                    'uid' => $data['uid'],
                     'number' => $data['number'],
                 ]
             );
             Pdo::execute(
                 'INSERT INTO `credits`(`uid`, `number`) VALUES(:uid, :number)',
                 [
-                    'uid'    => $data['uid'],
+                    'uid' => $data['uid'],
                     'number' => -$data['number'],
                 ]
             );
@@ -71,8 +71,8 @@ class Users
             'INSERT INTO `users`(`user_name`, `phone`, `credits`) VALUES(:userName, :phone, :credits)',
             [
                 'userName' => $userName,
-                'phone'     => $phone,
-                'credits'   => $credits,
+                'phone' => $phone,
+                'credits' => $credits,
             ]
         );
     }
