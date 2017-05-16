@@ -55,7 +55,7 @@ class Request
     // 获取 $_COOKIE 变量
     public static function cookie($name = null)
     {
-        return self::element($_COOKIE, $name);
+        return Cookie::get($name);
     }
 
     // 获取 $_FILES 变量
