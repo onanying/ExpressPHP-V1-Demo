@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'www\\' => array($baseDir . '/app_www'),
+    'www\\' => array($baseDir . '/applications/www'),
     'sys\\' => array($baseDir . '/system/library'),
-    'api\\' => array($baseDir . '/app_api'),
+    'api\\' => array($baseDir . '/applications/api'),
 );

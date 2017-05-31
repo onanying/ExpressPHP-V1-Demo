@@ -4,8 +4,8 @@
 
         "psr-4": {
             "sys\\": "system/library/",
-            "www\\": "app_www/",
-            "api\\": "app_api/"
+            "www\\": "applications/www/",
+            "api\\": "applications/api/"
         }
         
     }
