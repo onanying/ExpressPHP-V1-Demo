@@ -5,7 +5,7 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace sys\pdo;
+namespace sys\rdb;
 
 use sys\Config;
 

@@ -5,7 +5,7 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace sys\response;
+namespace sys\web;
 
 class View
 {

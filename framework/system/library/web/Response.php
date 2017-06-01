@@ -5,11 +5,7 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace sys;
-
-use sys\response\Json;
-use sys\response\Jsonp;
-use sys\response\Xml;
+namespace sys\web;
 
 class Response
 {

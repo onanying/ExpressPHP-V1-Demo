@@ -5,9 +5,7 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace sys;
-
-use sys\pdo\Statement;
+namespace sys\rdb;
 
 class Pdo
 {

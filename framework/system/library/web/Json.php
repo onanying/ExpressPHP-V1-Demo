@@ -5,11 +5,11 @@
  * @author 刘健 <code.liu@qq.com>
  */
 
-namespace sys\response;
+namespace sys\web;
 
 use sys\Config;
 
-class Jsonp extends json
+class Json
 {
 
     // 原始数据
@@ -31,15 +31,22 @@ class Jsonp extends json
     {
         // 过滤null
         if (Config::get('config.json.null_to_string')) {
-            $this->array = parent::filterNull($this->array);
+            $this->array = self::filterNull($this->array);
         }
         // 设置Content-Type
         header('Content-Type:application/json;charset=utf-8');
         // 不转义中文、斜杠
-        $json = json_encode($this->array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        $callback = Config::get('config.json.jsonp_callback');
-        echo $callback . '(' . $json . ')';
+        echo json_encode($this->array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         exit;
+    }
+
+    // 过滤null
+    public static function filterNull($array)
+    {
+        if (is_array($array)) {
+            return array_map([__CLASS__, __METHOD__], $array);
+        }
+        return is_null($array) ? '' : $array;
     }
 
 }
